@@ -35,5 +35,6 @@ def profile(request):
 
     data = {
     'update_user': update_user,
+    'title': 'Ваш профиль'
     }
     return render(request, 'users/profile.html',data)
