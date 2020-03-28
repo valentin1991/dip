@@ -1,0 +1,16 @@
+{% extends 'cut/main.html' %}
+
+{% block main_section %}
+<div >
+    <div >
+      <h2><b>Регистрация на сайте</b></h2>
+      <form  method="POST" class="container">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit" class="">Зарегистрироваться</button>
+      </form>
+      <hr>
+        Уже зарегистрированы? <a href="{% url 'user' %}">Войти в личный кабинет</a>
+    </div>
+</div>
+{% endblock main_section %}

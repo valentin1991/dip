@@ -1,0 +1,7 @@
+span[class="helptext"]{
+  color: red;
+  display: block;
+}
+ul[class="errorlist"]{
+  color: red;
+}

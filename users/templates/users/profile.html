@@ -1,0 +1,27 @@
+{% extends 'cut/main.html' %}
+{% block main_section %}
+<div class="">
+    <div class="" >
+      <h2><b>Кабинет пользователя {{user.username}} </b></h2>
+      <div class="">
+      <p class="">
+        <strong>@{{user.username}}</strong>
+        <br>
+        <b>Email:</b>{{user.email}}
+      </p>
+      <a href="{% url 'exit' %}" class=>Выйти</a>
+      </div>
+      <div class="">
+      <h2>Изменить данные для пользователя</h2>
+      <form  method="POST" enctype="multipart/form-data">
+        <div  >
+          {% csrf_token %}
+          {{ update_user}}
+
+          <button type="submit" class="">Обновить данные</button>
+        </div>
+      </form>
+      </div>
+    </div>
+</div>
+{% endblock main_section %}

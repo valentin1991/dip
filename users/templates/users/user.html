@@ -1,0 +1,15 @@
+{% extends 'cut/main.html' %}
+{% block main_section %}
+<div class="container">
+    <div class="form-section  border-warning  p-5" >
+      <h2><b>Авторизация на сайте</b></h2>
+      <form  method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit" class="btn btn-outline-warning">Войти</button>
+      </form>
+      <hr>
+        Уже зарегистрированы? <a href="#">Войти в личный кабинет</a>
+    </div>
+</div>
+{% endblock main_section %}

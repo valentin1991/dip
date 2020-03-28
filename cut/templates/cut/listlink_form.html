@@ -1,0 +1,21 @@
+{% extends 'cut/main.html' %}
+{% block main_section %}
+<div class="home">
+  <form   method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="">Создать ссылку</button>
+    <h2>Доступные ссылки</h2>
+    {% for post in link %}
+      {%if post.avtor == user%}
+      <div class="">
+        <p>Ссылка</p><a href="{{ post.long_link}}">link/{{post.short_link}}</a>
+      </div>
+      {%endif%}
+    {%endfor%}
+  </form>
+
+  <hr>
+</div>
+
+{% endblock main_section %}

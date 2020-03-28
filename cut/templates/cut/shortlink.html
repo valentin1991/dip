@@ -1,0 +1,23 @@
+
+{% block link_section %}
+<div class="home">
+  <form   method="POST">
+    {% csrf_token %}
+    {{long.as_p}}
+    {{short.as_p}}
+
+    <button type="submit" class="">Создать ссылку</button>
+    <h2>Доступные ссылки</h2>
+    {% for post in link %}
+      {%if post.avtor == user%}
+      <div class="">
+        <p>Ссылка</p><a href="{{ post.long_link}}">link/{{post.short_link}}</a>
+      </div>
+      {%endif%}
+    {%endfor%}
+    <hr>
+  </form>
+
+</div>
+
+{% endblock link_section %}

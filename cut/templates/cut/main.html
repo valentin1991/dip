@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="{% static 'cut/cut.css'%}">
+
+
+</head>
+<body>
+  <a class="" href="{% url 'cut-home' %}">Главная</a>
+  <a href="{% url 'profile' %}" class="btn btn-outline-secondary "> Профиль</a>
+  <a href="{% url 'reg' %}">Регистрация</a>
+  <a href="{% url 'createlink' %}">Ссылки</a>
+
+  {% block main_section %}
+
+  {% endblock %}
+
+
+<div class="footer">
+  @-Все права защищены
+</div>
+
+</body>
+</html>
