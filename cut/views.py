@@ -10,6 +10,10 @@ def home (request):
     }
     return render(request, 'cut/home.html', data )
 
+def about(request):
+    data = {'title':'Про нас'}
+    return render(request, 'cut/about.html', data )    
+
 
 class CreateShortLink(CreateView):
     model = ListLink

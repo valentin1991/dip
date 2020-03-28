@@ -11,14 +11,29 @@
 
 </head>
 <body>
-  <a class="" href="{% url 'cut-home' %}">Главная</a>
-  <a href="{% url 'profile' %}" class="btn btn-outline-secondary "> Профиль</a>
-  <a href="{% url 'reg' %}">Регистрация</a>
-  <a href="{% url 'createlink' %}">Ссылки</a>
+  <div class="">
 
-  {% block main_section %}
+      <a href="{% url 'cut-home' %}">Главная</a>
+      <a href="{% url 'about' %}">Про нас</a>
 
-  {% endblock %}
+      {% if user.is_authenticated %}
+
+        <a href="{% url 'profile' %}" > Профиль</a>
+        <a href="{% url 'createlink' %}">Ссылки</a>
+
+      {% else %}
+
+        <a href="{% url 'profile' %}">Войти</a>
+        <a href="{% url 'reg' %}">Регистрация</a>
+
+      {% endif %}
+    </div>
+
+    <div class="">
+
+      {% block main_section %}
+      {% endblock %}
+    </div>
 
 
 <div class="footer">
