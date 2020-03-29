@@ -11,25 +11,39 @@
 
 </head>
 <body>
-  <div class="">
+  <div class="header">
+      <span>
+      <b>Cutlink.net</b>
+      </span>
+      <div class="menu">
 
-      <a href="{% url 'cut-home' %}">Главная</a>
-      <a href="{% url 'about' %}">Про нас</a>
+        <a href="{% url 'cut-home' %}">Главная</a>
+        <a href="{% url 'about' %}">Про нас</a>
 
-      {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
 
         <a href="{% url 'profile' %}" > Профиль</a>
         <a href="{% url 'createlink' %}">Ссылки</a>
 
-      {% else %}
+        {% else %}
 
         <a href="{% url 'profile' %}">Войти</a>
         <a href="{% url 'reg' %}">Регистрация</a>
 
-      {% endif %}
+        {% endif %}
+      </div>
     </div>
 
-    <div class="">
+      {% if messages %}
+        {% for mess in messages %}
+          <div class="">
+          {{ mess }}
+          </div>
+        {% endfor %}
+      {%endif%}
+
+
+    <div class="page">
 
       {% block main_section %}
       {% endblock %}

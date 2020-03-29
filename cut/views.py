@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import CreateView
 from .forms import Links
 from .models import ListLink
+from django.db import IntegrityError
 
 
 def home (request):
@@ -12,7 +13,7 @@ def home (request):
 
 def about(request):
     data = {'title':'Про нас'}
-    return render(request, 'cut/about.html', data )    
+    return render(request, 'cut/about.html', data )
 
 
 class CreateShortLink(CreateView):
@@ -22,6 +23,7 @@ class CreateShortLink(CreateView):
     def form_valid(self, form):
         form.instance.avtor = self.request.user
         return super().form_valid(form)
+
 
     def get_context_data(self, **kwargs):
         context = super(CreateView, self).get_context_data(**kwargs)

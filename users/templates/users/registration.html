@@ -7,7 +7,7 @@
       <form  method="POST" class="container">
         {% csrf_token %}
         {{ form.as_p}}
-        <button type="submit" class="">Зарегистрироваться</button>
+        <button type="submit" class="redbutton">Зарегистрироваться</button>
       </form>
       <hr>
         Уже зарегистрированы? <a href="{% url 'user' %}">Войти в личный кабинет</a>

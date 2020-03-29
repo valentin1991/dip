@@ -1,7 +1,89 @@
-span[class="helptext"]{
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i&display=swap');
+
+*{font-family: 'Montserrat', sans-serif;;}
+
+* {
+ margin: 0;
+ padding: 0;
+}
+
+.header{
+  display: flex;
+  background-color:#cec0c0;
+}
+
+.header>span{
+  margin-top: 12px;
+  font-size: 30px;
+}
+
+.menu{
+  margin-left: 60%;
+  margin-top: 10px;
+}
+
+.menu>a{
+  display: inline-block;
+  background-color:#e6e9ec;
+	color:#942d3c;
+	border-radius: 5px;
+  border: solid silver;
+	text-align:center;
+	margin-top:2px;
+	padding: 5px 15px;
+  font-size: 12px;
+  font-weight: bold;}
+
+.page{
+  text-align: center;
+  margin:20% 25% 20% 25%;
+  width:50%;
+
+}
+
+.redbutton{
+  display: inline-block;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  text-align:center;
+  text-decoration: none;
+  margin-top:2px;
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+
+
+
+input{
+	padding: 4px 15px 4px 5px;
+  border-radius: 5px;
+  border: solid silver;
+  width: 300px;
+  height: 30px;
+  font-size: 18px;
+
+
+}
+
+.registerform{
+  display: inline-grid;
+  margin:0% 0% 0% 0%;
+  text-align:justify;
+}
+
+.registerform >label{
+  font-weight: bold;
+    font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+/* span[class="helptext"]{
   color: red;
   display: block;
 }
 ul[class="errorlist"]{
   color: red;
-}
+} */
