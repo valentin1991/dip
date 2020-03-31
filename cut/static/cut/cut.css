@@ -9,7 +9,7 @@
 
 .header{
   display: flex;
-  background-color:#cec0c0;
+  background-color:#414b50;
 }
 
 .header>span{
@@ -20,23 +20,32 @@
 .menu{
   margin-left: 60%;
   margin-top: 10px;
+
 }
 
 .menu>a{
   display: inline-block;
-  background-color:#e6e9ec;
-	color:#942d3c;
+  background-color:#4CAF50;
+	color:#FFEB3B;
 	border-radius: 5px;
-  border: solid silver;
+  border: solid #00BCD4;
 	text-align:center;
 	margin-top:2px;
 	padding: 5px 15px;
   font-size: 12px;
   font-weight: bold;}
 
+
+.footer{
+  display: flex;
+  background-color:#414b50;
+  height: 80px;
+
+}
+
 .page{
   text-align: center;
-  margin:20% 25% 20% 25%;
+  margin:10% 25% 10% 25%;
   width:50%;
 
 }
@@ -53,9 +62,19 @@
   font-size: 18px;
   font-weight: bold;
   border: none;
+  -webkit-transition: all 0.5s;
+
 }
 
+.redbutton:hover{
+  cursor:pointer;
+  -moz-transform: translateY(-12px);
+  -webkit-transform: translateY(-12px);
+  -o-transform: translateY(-12px);
+  -ms-transform: translateY(-12px);
+  transform: translateY(-12px);
 
+}
 
 input{
 	padding: 4px 15px 4px 5px;
@@ -64,6 +83,7 @@ input{
   width: 300px;
   height: 30px;
   font-size: 18px;
+  display: block;
 
 
 }
@@ -74,12 +94,16 @@ input{
   text-align:justify;
 }
 
-.registerform >label{
+label{
   font-weight: bold;
-    font-size: 18px;
+  font-size: 18px;
   margin-top: 10px;
   margin-bottom: 3px;
+
 }
+
+#id_long_link,#sh
+
 /* span[class="helptext"]{
   color: red;
   display: block;
