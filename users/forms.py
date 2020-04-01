@@ -21,7 +21,7 @@ class UseerOurRegistration(forms.ModelForm):
         'password_mismatch': ('The two password fields didn’t match.'),
     }
     password1 = forms.CharField(
-        label=("Password"),
+        label=("Пароль"),
         strip=False,
         widget=forms.PasswordInput(attrs={'autocomplete': 'new-password'}),
         help_text=password_validation.password_validators_help_text_html(),

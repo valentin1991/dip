@@ -4,12 +4,15 @@
 <div >
     <div >
       <h2><b>Регистрация на сайте</b></h2>
-      <form  method="POST" class="container">
+      <form  method="POST" class="authorization">
         {% csrf_token %}
         {{ form.as_p}}
+        <br>
         <button type="submit" class="redbutton">Зарегистрироваться</button>
+
       </form>
-      <hr>
+      <br>
+      <hr>      
         Уже зарегистрированы? <a href="{% url 'user' %}">Войти в личный кабинет</a>
     </div>
 </div>
