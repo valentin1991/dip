@@ -24,6 +24,7 @@
 }
 
 .menu>a{
+  text-decoration: none;
   display: inline-block;
   background-color:#4CAF50;
 	color:#FFEB3B;
@@ -33,7 +34,8 @@
 	margin-top:2px;
 	padding: 5px 15px;
   font-size: 12px;
-  font-weight: bold;}
+  font-weight: bold;
+}
 
 
 .footer{
@@ -80,7 +82,7 @@ input{
 	padding: 4px 15px 4px 5px;
   border-radius: 5px;
   border: solid silver;
-  width: 300px;
+  width: 500px;
   height: 30px;
   font-size: 18px;
   display: block;
@@ -95,6 +97,8 @@ input{
 }
 
 label{
+
+  text-align: left;
   font-weight: bold;
   font-size: 18px;
   margin-top: 10px;
@@ -102,8 +106,24 @@ label{
 
 }
 
-#id_long_link,#sh
+.createlink   {
+  text-align: left;
+  margin-left: 100px;
+}
 
+.listlink {
+
+  text-align: left;
+  font-weight: bold;
+  color: red;
+  margin-left: 80px;
+  text-decoration: none;
+}
+
+.authorization{
+  text-align: left;
+  margin-left: 100px;
+}
 /* span[class="helptext"]{
   color: red;
   display: block;

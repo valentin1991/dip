@@ -1,15 +1,23 @@
 {% extends 'cut/main.html' %}
 {% block main_section %}
 <div >
-  <form   method="POST" class="listlink">
+  <form   method="POST" class="">
+    <div class="createlink">
+
     {% csrf_token %}
     {{form}}
+    <br>
+  </div>
     <button type="submit" class="redbutton">Создать ссылку</button>
-    <h2>Доступные ссылки</h2>
+    <br>
+    <br>
+    <br>
+    <h2>Доступные ссылки:</h2>
     {% for post in link %}
       {%if post.avtor == user%}
       <div class="listlink">
-        <p>Ссылка</p><a href="{{ post.long_link}}">link/{{post.short_link}}</a>
+        <p>Ссылка<a href="{{ post.long_link}}"> link/{{post.short_link}}</a></p>
+        <br>
       </div>
       {%endif%}
     {%endfor%}

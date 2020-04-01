@@ -3,11 +3,14 @@
 <div class="container">
     <div class="form-section  border-warning  p-5" >
       <h2><b>Авторизация на сайте</b></h2>
-      <form  method="POST">
+      <br>
+      <form  method="POST" class="authorization">
         {% csrf_token %}
         {{ form.as_p}}
+        <br><br>
         <button type="submit" class="redbutton">Войти</button>
       </form>
+      <br><br>
       <hr>
         Уже зарегистрированы? <a href="#">Войти в личный кабинет</a>
     </div>
